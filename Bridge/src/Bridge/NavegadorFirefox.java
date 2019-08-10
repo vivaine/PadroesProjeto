@@ -1,7 +1,12 @@
 package Bridge;
 
-public class NavegadorFirefox implements WebSiteImplementado {
+public class NavegadorFirefox extends NavegadorAbstract implements INavegador {
 
+	public NavegadorFirefox(Website website) {
+		super(website);
+	}
+	
+	
 	@Override
 	public void desenharJanela() {
 		System.out.println("Firefox Desenhou janela");
@@ -11,6 +16,12 @@ public class NavegadorFirefox implements WebSiteImplementado {
 	@Override
 	public void conectar() {
 		System.out.println("Firefox conectou");
+	}
+
+	@Override
+	public void exibir() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

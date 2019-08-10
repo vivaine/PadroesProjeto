@@ -1,7 +1,12 @@
 package Bridge;
 
-public class NavegadorChrome implements WebSiteImplementado {
+public class NavegadorChrome extends NavegadorAbstract implements INavegador {
 
+	
+	public NavegadorChrome(Website website) {
+		super(website);
+	}
+	
 	@Override
 	public void desenharJanela() {
 		System.out.println("Chrome Desenhou janela");
@@ -11,6 +16,11 @@ public class NavegadorChrome implements WebSiteImplementado {
 	@Override
 	public void conectar() {
 		System.out.println("Chrome conectou");
+		
+	}
+	
+	
+	public void exibir() {
 		
 	}
 

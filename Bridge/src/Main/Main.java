@@ -1,13 +1,19 @@
 package Main;
 
+import Bridge.INavegador;
+import Bridge.NavegadorChrome;
+import Bridge.NavegadorFirefox;
+import Bridge.WebsiteGlobo;
+import Bridge.WebsiteUol;
+
 public class Main {
 
 	public static void main(String[] args) {
-		NavegadorAbstract navegador = new NavegadorChrome(new WebsiteGlobo);
+		INavegador navegador = new NavegadorChrome(new WebsiteGlobo());
 		navegador.exibir();
 		
-		NavegadorAbstract navegador = new NavegadorFirefox(new WebsiteUol);
-		navegador.exibir();
+		INavegador navegador2 = new NavegadorFirefox(new WebsiteUol());
+		navegador2.exibir();
 		
 
 	}
